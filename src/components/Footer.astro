@@ -1,0 +1,14 @@
+---
+import Social from "./Social.astro";
+const platform = "github";
+const username = "phillipkregg";
+
+const props = { platform, username };
+---
+
+<footer>
+  <p>
+    Learn more about my projects on
+    <Social {...props} />
+  </p>
+</footer>

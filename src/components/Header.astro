@@ -1,0 +1,17 @@
+---
+import Hamburger from "./Hamburger.astro";
+import Navigation from "./Navigation.astro";
+
+interface Props {
+  pageTitle: string;
+}
+
+const { pageTitle } = Astro.props;
+---
+
+<header>
+  <nav>
+    <Hamburger />
+    <Navigation />
+  </nav>
+</header>
