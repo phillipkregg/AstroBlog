@@ -1,5 +1,6 @@
 ---
 import "../layouts/BaseLayout.astro";
+import Greeting from "../components/Greeting";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 const pageTitle = "Home Page";
@@ -7,4 +8,8 @@ const pageTitle = "Home Page";
 
 <BaseLayout pageTitle={pageTitle}>
   <h2>My awesome site yo!</h2>
+  <Greeting
+    client:visible
+    messages={["Hi", "Hello", "Howdy", "Hey there", "Yo, what up"]}
+  />
 </BaseLayout>
