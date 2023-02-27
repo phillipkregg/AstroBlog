@@ -1,0 +1,16 @@
+---
+import "reflect-metadata";
+import type { ResponseData } from "./api/data.json";
+
+import TaskListContainer from "../components/Tasks/TaskListContainer";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const pageTitle = "Task Management";
+
+const response = await fetch("http://localhost:3000/api/tasks.json");
+const data = await response.json();
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <TaskListContainer client:visible tasks={data} />
+</BaseLayout>
