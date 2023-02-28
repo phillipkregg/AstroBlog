@@ -11,8 +11,6 @@ export async function get({ params }: any) {
   const taskService = Container.get(TaskService);
   const tasks = await taskService.getAllTasks();
 
-  debugger;
-
   return {
     body: JSON.stringify(tasks),
   };
